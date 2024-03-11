@@ -34,6 +34,7 @@ export default {
 
     created(){
         // ファイルがjson形式でないとのエラーが出るので直に定義してみた
+        //
         var wordData = [
         {
             "eWord": "cat",
