@@ -52,7 +52,12 @@ export default {
         {
             "eWord": "hand",
             "jWord": "手"
-        }]
+        },
+        {
+            "eWord": "salad",
+            "jWord": "サラダ"
+        }
+    ]
         console.log(wordData)
         // waorDataは3要素のarrayとして正しく読み込まれている
         var words=  JSON.parse(wordData)
