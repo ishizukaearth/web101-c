@@ -48,10 +48,6 @@ export default {
         {
             "eWord": "hat",
             "jWord": "帽子"
-        },
-        {
-            "eWord": "hand",
-            "jWord": "手"
         }]
         console.log(wordData)
         // waorDataは3要素のarrayとして正しく読み込まれている
