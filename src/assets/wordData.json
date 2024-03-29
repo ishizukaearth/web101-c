@@ -1,44 +1,42 @@
-{
-    "wordData" : [
-        {
-            "eWord": "cat",
-            "jWord": "猫"
-        },
-        {
-            "eWord": "catch",
-            "jWord": "捕まえる"
-        },
-        {
-            "eWord": "hat",
-            "jWord": "帽子"
-        },
-        {
-            "eWord": "hand",
-            "jWord": "手"
-        },
-        {
-            "eWord": "salad",
-            "jWord": "サラダ"
-        },
-        {
-            "eWord": "land",
-            "jWord": "土地"
-        },
-        {
-            "eWord": "plastic",
-            "jWord": "ビニールの"
-        },
-        {
-            "eWord": "plan",
-            "jWord": "計画・計画する"
-        },
-        {
-            "eWord": "man",
-            "jWord": "男・人"
-        },
-        {
-            "eWord": "stand",
-            "jWord": "立つ"
-        }
-    ]
-}
+[
+    {
+        "eWord": "cat",
+        "jWord": "猫"
+    },
+    {
+        "eWord": "catch",
+        "jWord": "捕まえる"
+    },
+    {
+        "eWord": "hat",
+        "jWord": "帽子"
+    },
+    {
+        "eWord": "hand",
+        "jWord": "手"
+    },
+    {
+        "eWord": "salad",
+        "jWord": "サラダ"
+    },
+    {
+        "eWord": "land",
+        "jWord": "土地"
+    },
+    {
+        "eWord": "plastic",
+        "jWord": "ビニールの"
+    },
+    {
+        "eWord": "plan",
+        "jWord": "計画・計画する"
+    },
+    {
+        "eWord": "man",
+        "jWord": "男・人"
+    },
+    {
+        "eWord": "stand",
+        "jWord": "立つ"
+    }
+]

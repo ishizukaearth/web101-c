@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count=0;
+        var timer=NaN;
+        function start(){
+            clearInterval(timer);
+            timer = setInterval (countup,1000);
+        }
+        function countup(){
+            count ++
+            document.querySelector("button").textContent=count
+        }
+        function stop(){
+            clearInterval(timer);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="start()"></button>
+    <button onclick="stop()"></button>
+</body>
+</html>

@@ -1,25 +1,17 @@
-<!-- web101-ｃ AppTwoWordCard
-    10枚のcard列表し、訳語読み上げ(WordCard)と1枚のカードの反復読み上げ(WordCardTimer)をflgで切り替える
+<!-- web101-ｃ 
+    目的
+    単語データをファイル(wordData.josn)から読み込む（web101-b）を交互に連続読み上げたら、次の語へ進む
 -->
 
 <template>
-    <!-- <p @click="flg=!flg">切替</p> -->
-    <div id="app" >
-        <div v-if="flg">
-            <!-- 訳語 -->
-            <WordCard v-for="(c, index) in cards" :key="index" :jWord="c.jWord" :eWord="c.eWord" :index="index"></WordCard>
-        </div>
-        <div v-else>
-            <!-- 反復 -->
-            <WordCardTimer v-for="(c, index) in cards" :key="index" :jWord="c.jWord" :eWord="c.eWord" :index="index"></WordCardTimer>
-        </div>
+    <div id="app">
+        <WordCard v-for="(c, index) in cards" :key="index" :jWord="c.jWord" :eWord="c.eWord" :index="index"></WordCard>
     </div>
 </template>
 
 <script>
 import WordCard from "./components/WordCardPron.vue"
-import WordCardTimer from "./components/WordCardPronTimer.vue"
-// flg=true
+
 // jsonフィルの読み込み
 // 出典 https://pystyle.info/vue-load-json-data-statically-and-dynamically/
 import wordData from "./assets/wordData.json";
@@ -29,12 +21,10 @@ export default {
     name: "App",
     components: {
         WordCard,
-        WordCardTimer,
     },
     data() {
         return {
             cards: [],
-            flg: false,
         };
     },
 

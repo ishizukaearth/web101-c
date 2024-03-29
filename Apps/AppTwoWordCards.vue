@@ -1,10 +1,12 @@
 <!-- web101-ｃ AppTwoWordCard
     10枚のcard列表し、訳語読み上げ(WordCard)と1枚のカードの反復読み上げ(WordCardTimer)をflgで切り替える
+    切り替えがうまくいかない！！
 -->
 
 <template>
-    <!-- <p @click="flg=!flg">切替</p> -->
-    <div id="app" >
+    <div id="app">
+        <div flg="false"></div>
+        <!-- flg="false" --> 
         <div v-if="flg">
             <!-- 訳語 -->
             <WordCard v-for="(c, index) in cards" :key="index" :jWord="c.jWord" :eWord="c.eWord" :index="index"></WordCard>
@@ -34,7 +36,6 @@ export default {
     data() {
         return {
             cards: [],
-            flg: false,
         };
     },
 

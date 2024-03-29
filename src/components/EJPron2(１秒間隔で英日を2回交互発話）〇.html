@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- 日英を1秒毎交互発話 Mar20'24 
+    発展：発話終了後0.5秒待ち
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日英を1秒毎交互発話</title>
+    <script>
+        var enFlg = true;
+        count=0;
+        var timer = NaN;
+        const audio = new Audio();
+        function start() {
+            clearInterval(timer);
+            timer = setInterval(ejPron, 1000);
+        }
+        // startボタンを押すたびに、cat-猫-cat-猫と言う、Stop()でcountをクリアしてreturnする
+        function ejPron() {
+            if (count>3) { stop();
+                return
+             };
+            if (count%2 == 0) {
+                // audio.src = `cat.mp3`
+                audio.src=`cat.mp3`
+            } else (
+                audio.src =`猫.mp3`
+            );
+            console.log(count);
+            audio.play();
+            count ++;
+        }
+        function stop() {
+            clearInterval(timer);
+            count=0;
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+</body>
+
+</html>
