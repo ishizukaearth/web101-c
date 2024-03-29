@@ -13,8 +13,8 @@
             </div>
             <div v-else>
                 <!-- 反復 -->
-                <WordCardTimer v-for="(c, index) in cards" :key="index" :jWord="c.jWord" :eWord="c.eWord"
-                    :index="index"></WordCardTimer>
+                <p @click="nextCard()">次のカード</p>
+                <WordCardTimer :jWord="cards[cardNo].jWord" :eWord="cards[cardNo].eWord" :index="cardNo" />
             </div>
         </div>
     </div>
@@ -23,7 +23,6 @@
 <script>
 import WordCard from "./components/WordCardPron.vue"
 import WordCardTimer from "./components/WordCardPronTimer.vue"
-// flg=true
 // jsonフィルの読み込み
 // 出典 https://pystyle.info/vue-load-json-data-statically-and-dynamically/
 import wordData from "./assets/wordData.json";
@@ -39,9 +38,14 @@ export default {
         return {
             cards: [],
             flg: false,
+            cardNo: 0,
         };
     },
-
+    methods: {
+        nextCard() {
+            this.cardNo ++
+        }
+    },
     created() {
         this.cards = [];
         for (var j = 0; j < wordData.length; j++) {

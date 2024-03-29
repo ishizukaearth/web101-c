@@ -11,7 +11,7 @@
         <p :style="{ fontSize: efSize + 'px', margin: 0 }" v-show="flip">{{ eWord }} </p>
         <p>-反復-</p>
         <!-- indexはカード番号 -->
-        <audio :src="require('./../assets/evoice/' + eWord + '.mp3')" :id="'esound' + index"></audio>
+        <audio preload :src="require('./../assets/evoice/' + eWord + '.mp3')" :id="'esound' + index"></audio>
         <audio :src="require(`./../assets/jvoice/${jWord}.mp3`)" :id="'jsound' + index"></audio>
         <img :src="require(`./../assets/fig/${eWord}.jpg`)">
     </div>
