@@ -3,15 +3,19 @@
 -->
 
 <template>
-    <!-- <p @click="flg=!flg">切替</p> -->
-    <div id="app" >
-        <div v-if="flg">
-            <!-- 訳語 -->
-            <WordCard v-for="(c, index) in cards" :key="index" :jWord="c.jWord" :eWord="c.eWord" :index="index"></WordCard>
-        </div>
-        <div v-else>
-            <!-- 反復 -->
-            <WordCardTimer v-for="(c, index) in cards" :key="index" :jWord="c.jWord" :eWord="c.eWord" :index="index"></WordCardTimer>
+    <div>
+        <p @click="flg = !flg">切替</p>
+        <div id="app">
+            <div v-if="flg">
+                <!-- 訳語 -->
+                <WordCard v-for="(c, index) in cards" :key="index" :jWord="c.jWord" :eWord="c.eWord" :index="index">
+                </WordCard>
+            </div>
+            <div v-else>
+                <!-- 反復 -->
+                <WordCardTimer v-for="(c, index) in cards" :key="index" :jWord="c.jWord" :eWord="c.eWord"
+                    :index="index"></WordCardTimer>
+            </div>
         </div>
     </div>
 </template>
